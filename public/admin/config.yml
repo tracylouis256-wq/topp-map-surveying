@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images get stored
+media_folder: "public/images/projects"
+public_folder: "/images/projects"
+
+# Your content collections
+collections:
+  # 📁 PROJECTS
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Cadastral", "Boundary", "Topographic", "Construction", "Drone", "Mining"] }
+      - { label: "Year", name: "year", widget: "number", default: 2025 }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Map Coordinates"
+        name: "coordinates"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Latitude", name: "lat", widget: "number" }
+          - { label: "Longitude", name: "lng", widget: "number" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+
+  # 📊 STATISTICS (single file)
+  - name: "statistics"
+    label: "Statistics"
+    files:
+      - label: "Homepage Stats"
+        name: "stats"
+        file: "content/statistics.json"
+        fields:
+          - { label: "Cadastral Surveys", name: "cadastral", widget: "number", default: 195 }
+          - { label: "Years of Experience", name: "years", widget: "number", default: 4 }
+          - { label: "Clients Served", name: "clients", widget: "number", default: 112 }
+          - { label: "Accuracy Commitment (%)", name: "accuracy", widget: "number", default: 99.5 }
