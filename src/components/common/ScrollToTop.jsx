@@ -21,7 +21,7 @@ const ScrollToTop = () => {
     const handleScroll = () => {
       // Show button after scrolling down 400px
       setShowButton(window.scrollY > 400);
-      
+
       // Calculate scroll progress (for the ring)
       const winScroll = document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -71,7 +71,7 @@ const ScrollToTop = () => {
                 cy="28"
                 r="26"
                 fill="none"
-                stroke="#d90429"
+                stroke="#F26522"
                 strokeWidth="3"
                 strokeDasharray={2 * Math.PI * 26}
                 strokeDashoffset={2 * Math.PI * 26 * (1 - scrollProgress / 100)}
@@ -79,15 +79,15 @@ const ScrollToTop = () => {
                 strokeLinecap="round"
               />
             </svg>
-            
+
             {/* Inner Button */}
             <div className="relative w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary/90 transition-all duration-300 hover:shadow-xl">
               <FaArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
-              
+
               {/* Pulse Effect */}
               <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></span>
             </div>
-            
+
             {/* Tooltip on Hover */}
             <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-secondary text-white text-sm py-1 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
               Back to Top
@@ -97,7 +97,7 @@ const ScrollToTop = () => {
       </AnimatePresence>
 
       {/* Scroll Progress Bar at Top (Optional) */}
-      <motion.div 
+      <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX: scrollProgress / 100 }}
         initial={{ scaleX: 0 }}

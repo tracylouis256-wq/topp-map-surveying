@@ -10,12 +10,14 @@ const SurveyRequestPage = () => {
   const [requestData, setRequestData] = useState(null);
 
   const handleSubmitSuccess = (data) => {
-    console.log('✅ SurveyRequestPage received data:', data); // Debug log
+    console.log('✅ SurveyRequestPage received data:', data);
     setRequestData(data);
     setSubmitted(true);
+
+    // ⬇️ NEW: scroll to top so the user sees the thank-you message
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Log when requestData changes
   React.useEffect(() => {
     console.log('📦 requestData state updated:', requestData);
   }, [requestData]);

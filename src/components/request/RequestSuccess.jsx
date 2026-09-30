@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaCheckCircle, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { COMPANY_INFO } from '../../utils/constants';
 
 const RequestSuccess = ({ requestData }) => {
   // Log the received data for debugging
   console.log('RequestSuccess received:', requestData);
-  
+
   // Default values in case requestData is missing
   const data = requestData || {
     fullName: 'Not provided',
@@ -17,6 +18,12 @@ const RequestSuccess = ({ requestData }) => {
     method: 'whatsapp'
   };
 
+  // Pre-filled follow-up message for WhatsApp
+  const followUpMessage = `Hello ${COMPANY_INFO.name}, I just submitted a survey request${
+    data.fullName && data.fullName !== 'Not provided' ? ` (Name: ${data.fullName})` : ''
+  }. Looking forward to your response.`;
+  const whatsappLink = `https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(followUpMessage)}`;
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -26,11 +33,11 @@ const RequestSuccess = ({ requestData }) => {
       <div className="flex justify-center mb-4">
         <FaCheckCircle className="text-6xl text-green-500" />
       </div>
-      
+
       <h2 className="text-2xl font-bold mb-4">Request Submitted Successfully!</h2>
-      
+
       <p className="text-accent mb-6">
-        Thank you for choosing TOPP MAP Surveying Consult. We have received your survey request 
+        Thank you for choosing {COMPANY_INFO.name}. We have received your survey request
         and will contact you within 24 hours.
       </p>
 
@@ -55,7 +62,7 @@ const RequestSuccess = ({ requestData }) => {
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="https://wa.me/233539896049"
+          href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition flex items-center justify-center gap-2"
@@ -63,7 +70,7 @@ const RequestSuccess = ({ requestData }) => {
           <FaWhatsapp />
           WhatsApp Us
         </a>
-        
+
         <Link
           to="/"
           className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition"
