@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaProjectDiagram, FaUsers, FaClock, FaCheckCircle } from 'react-icons/fa';
+import statsData from '../../../content/statistics.json';
 
 const Statistics = () => {
   const [ref, inView] = useInView({
@@ -9,31 +10,35 @@ const Statistics = () => {
     threshold: 0.1,
   });
 
-  // These figures reflect the Managing Director's prior surveying
-  // experience, brought into MapRivo Survey Consult. Update them only
-  // with genuine, verifiable numbers.
+  const data = {
+    cadastral: statsData?.cadastral ?? 0,
+    years: statsData?.years ?? 0,
+    clients: statsData?.clients ?? 0,
+    accuracy: statsData?.accuracy ?? 0,
+  };
+
   const stats = [
     {
       icon: <FaProjectDiagram className="text-4xl text-primary" />,
-      value: 195,
+      value: data.cadastral,
       label: 'Cadastral Surveys Completed',
       suffix: '+',
     },
     {
       icon: <FaClock className="text-4xl text-primary" />,
-      value: 4,
+      value: data.years,
       label: 'Years of Field Experience',
       suffix: '+',
     },
     {
       icon: <FaUsers className="text-4xl text-primary" />,
-      value: 112,
+      value: data.clients,
       label: 'Clients Served',
       suffix: '+',
     },
     {
       icon: <FaCheckCircle className="text-4xl text-primary" />,
-      value: 99.5,
+      value: data.accuracy,
       label: 'Accuracy Commitment',
       suffix: '%',
     },
@@ -73,7 +78,6 @@ const Statistics = () => {
   return (
     <section className="py-16 bg-gray-50" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Honest attribution — figures reflect MD's prior experience */}
         <motion.div
           className="text-center mb-12 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
