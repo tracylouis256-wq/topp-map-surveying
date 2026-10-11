@@ -1,0 +1,15 @@
+{
+  "coverImage": "/images/projects/screenshot-2026-10-01-102937.png",
+  "featured": false,
+  "equipment": "GNSS RTK",
+  "region": "Greater Accra",
+  "location": "Accra, Ghana",
+  "title": "Sample Survey Entry — Pending Review",
+  "coordinates": {
+    "lat": 5.6037,
+    "lng": -0.187
+  },
+  "description": "This is a temporary sample entry created to verify the publishing workflow. It will be removed shortly.",
+  "year": 2026,
+  "category": "Cadastral"
+}
