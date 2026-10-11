@@ -9,6 +9,9 @@ const Statistics = () => {
     threshold: 0.1,
   });
 
+  // These figures reflect the Managing Director's prior surveying
+  // experience, brought into MapRivo Survey Consult. Update them only
+  // with genuine, verifiable numbers.
   const stats = [
     {
       icon: <FaProjectDiagram className="text-4xl text-primary" />,
@@ -19,7 +22,7 @@ const Statistics = () => {
     {
       icon: <FaClock className="text-4xl text-primary" />,
       value: 4,
-      label: 'Years of Experience',
+      label: 'Years of Field Experience',
       suffix: '+',
     },
     {
@@ -70,6 +73,20 @@ const Statistics = () => {
   return (
     <section className="py-16 bg-gray-50" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Honest attribution — figures reflect MD's prior experience */}
+        <motion.div
+          className="text-center mb-12 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="section-title mb-4">Experience Behind the Practice</h2>
+          <p className="text-accent">
+            The figures below reflect our Managing Director's prior surveying
+            experience, brought into MapRivo Survey Consult.
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div

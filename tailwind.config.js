@@ -7,20 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand colors — sourced from the GeoAxis logo
-        primary:    '#F26522',   // accent orange (was #d90429 red)
-        secondary:  '#1E2530',   // charcoal dark  (was #111111)
-        accent:     '#6c757d',   // neutral grey — unchanged
-        background: '#ffffff',   // unchanged
-        light:      '#F8F9FA',   // new — soft off-white for section backgrounds
+        // Brand colors — sourced from the MapRivo logo
+        primary:    '#16A34A',   // MapRivo emerald green
+        secondary:  '#0B2D6B',   // MapRivo navy
+        accent:     '#3B82F6',   // MapRivo sky blue
+        background: '#FFFFFF',   // white
+        light:      '#F7F8FA',   // soft off-white for section backgrounds
 
-        // Optional alias group for future use — lets you write
-        // `bg-geoaxis-orange`, `text-geoaxis-dark`, etc.
+        // Alias group — lets you write `bg-geoaxis-orange`,
+        // `text-geoaxis-dark`, etc. (key kept as `geoaxis` so existing
+        // components don't need to change)
         geoaxis: {
-          dark:   '#1E2530',
-          orange: '#F26522',
-          light:  '#F8F9FA',
-          grey:   '#6c757d',
+          dark:   '#0B2D6B',   // navy  — was charcoal
+          orange: '#16A34A',   // green — was orange
+          blue:   '#3B82F6',   // sky   — new
+          navy:   '#0B2D6B',   // navy  — new explicit alias
+          light:  '#F7F8FA',
+          grey:   '#5B6570',
           white:  '#FFFFFF',
         },
       },

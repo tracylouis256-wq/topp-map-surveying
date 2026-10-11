@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { COMPANY_INFO } from '../../utils/constants';
 
 const CompanyIntro = () => {
   const [ref, inView] = useInView({
@@ -19,20 +18,24 @@ const CompanyIntro = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-title">
-              Welcome to <span className="text-primary">GEO</span>AXIS Survey Consult
+              Welcome to{' '}
+              <span className="text-secondary">Map</span>
+              <span className="text-primary">Rivo</span>{' '}
+              Survey Consult
             </h2>
             <p className="text-lg text-accent mb-6">
               Your trusted partner in professional land surveying and geomatics services in Ghana.
             </p>
             <p className="text-gray-600 mb-4">
-              With years of experience and a team of highly skilled professionals, we provide
-              comprehensive surveying solutions for land development, infrastructure projects,
+              Led by an experienced land surveyor and supported by a growing
+              network of professional collaborators, we provide comprehensive
+              surveying solutions for land development, infrastructure projects,
               mining operations, and construction developments across the country.
             </p>
             <p className="text-gray-600">
-              Our commitment to accuracy, reliability, and customer satisfaction has made us
-              the preferred choice for landowners, real estate developers, construction companies,
-              and government agencies.
+              Our commitment to accuracy, reliability, and client service is
+              central to every project we take on — for landowners, real estate
+              developers, construction companies, and clients across Ghana.
             </p>
           </motion.div>
 

@@ -12,28 +12,28 @@ const WhyChooseUs = () => {
   const advantages = [
     {
       icon: <FaUsers className="text-3xl" />,
-      title: 'Experienced Professionals',
-      description: 'Team of certified surveyors with years of industry experience'
+      title: 'Led by Experience',
+      description: 'Directed by a land surveyor with a background in cadastral and field surveying.'
     },
     {
       icon: <FaCogs className="text-3xl" />,
-      title: 'Modern Equipment',
-      description: 'State-of-the-art GNSS, total stations, and drone technology'
+      title: 'Professional Instrumentation',
+      description: 'GNSS and total station methods, with digital processing workflows.'
     },
     {
       icon: <FaClock className="text-3xl" />,
-      title: 'Fast Delivery',
-      description: 'Efficient project completion without compromising quality'
+      title: 'Organised Delivery',
+      description: 'Clear communication and structured project management from brief to handover.'
     },
     {
       icon: <FaCheckCircle className="text-3xl" />,
-      title: 'Reliable Expertise',
-      description: 'Proven track record of accurate and dependable surveys'
+      title: 'Accuracy First',
+      description: 'Careful attention to spatial measurement and data integrity on every project.'
     },
     {
       icon: <FaMoneyBillWave className="text-3xl" />,
-      title: 'Affordable Services',
-      description: 'Competitive pricing with transparent cost structure'
+      title: 'Transparent Quotations',
+      description: 'Scopes and costs agreed in advance — no surprises on the final invoice.'
     }
   ];
 
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
           >
             <h2 className="section-title">Why Choose Us</h2>
             <p className="text-lg text-accent mb-8">
-              We combine technical expertise with modern technology to deliver exceptional results
+              A professional practice built on substance — careful measurements, clear communication and organised delivery.
             </p>
 
             <div className="space-y-6">
@@ -71,28 +71,25 @@ const WhyChooseUs = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Image with Stats */}
+          {/* Right Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="relative mt-8 lg:mt-0"
           >
-            {/* Image Container */}
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <img
                 src="/images/equipment/surveyor-team.jpg"
-                alt="Survey team at work"
+                alt="Surveyor at work in the field"
                 className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               />
             </div>
-            
-            
 
-            {/* Optional: Floating badge for mobile */}
-            <div className="absolute top-4 right-4 lg:hidden">
+            {/* Floating badge — honest replacement for "Trusted Since 2008" */}
+            <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
               <div className="bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-                Trusted Since 2008
+                Mapping Today, Shaping Tomorrow
               </div>
             </div>
           </motion.div>

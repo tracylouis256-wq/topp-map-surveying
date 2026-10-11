@@ -42,10 +42,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-1">
-              {COMPANY_INFO.name.split(' ')[0].toUpperCase()}
-              <span className="text-primary">
-                {COMPANY_INFO.name.split(' ')[1]?.toUpperCase()}
-              </span>
+              <span className="text-white">Map</span>
+              <span className="text-primary">Rivo</span>
             </h3>
             <p className="text-xs tracking-[0.2em] text-gray-500 mb-4 uppercase">
               Survey Consult

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  FaComments, 
-  FaSearch, 
-  FaRuler, 
-  FaLaptop, 
-  FaFileAlt 
+import {
+  FaComments,
+  FaSearch,
+  FaRuler,
+  FaLaptop,
+  FaFileAlt
 } from 'react-icons/fa';
 
 const SurveyProcess = () => {
@@ -29,7 +29,7 @@ const SurveyProcess = () => {
     {
       icon: <FaRuler className="text-3xl" />,
       title: 'Field Data Collection',
-      description: 'Accurate measurements using modern equipment'
+      description: 'Accurate measurements using appropriate instrumentation'
     },
     {
       icon: <FaLaptop className="text-3xl" />,
@@ -54,7 +54,7 @@ const SurveyProcess = () => {
         >
           <h2 className="section-title">How Our Survey Process Works</h2>
           <p className="section-subtitle">
-            A systematic approach to delivering accurate survey results
+            A structured approach to reliable survey results
           </p>
         </motion.div>
 

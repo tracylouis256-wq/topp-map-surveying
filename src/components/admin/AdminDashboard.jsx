@@ -24,7 +24,7 @@ const AdminDashboard = () => {
       {/* Sidebar */}
       <div className="fixed left-0 top-0 h-full w-64 bg-secondary text-white">
         <div className="p-6">
-          <h2 className="text-2xl font-bold mb-8">GeoAxis Admin</h2>
+          <h2 className="text-2xl font-bold mb-8">MapRivo Admin</h2>
           
           <nav className="space-y-2">
             <button

@@ -1,0 +1,37 @@
+{
+  "title": "Aerial Mapping & Photogrammetry",
+  "subtitle": "Drone-based aerial surveys available on qualifying projects — supporting site assessment, topographic data capture, and progress monitoring.",
+  "disclaimer": "Imagery shown is illustrative of the type of work delivered. Genuine MapRivo field captures will be published here as they become available.",
+  "images": [
+    {
+      "url": "/images/drone/aerial-site-assessment.jpg",
+      "title": "Aerial Site Assessment",
+      "description": "Drone-based overview of development and construction sites."
+    },
+    {
+      "url": "/images/drone/agricultural-mapping.jpg",
+      "title": "Land & Agricultural Mapping",
+      "description": "High-resolution aerial coverage for land use and agricultural assessment."
+    },
+    {
+      "url": "/images/drone/construction-progress.jpg",
+      "title": "Construction Progress Monitoring",
+      "description": "Periodic aerial imagery for project documentation and site coordination."
+    },
+    {
+      "url": "/images/drone/topographic-capture.jpg",
+      "title": "Topographic Data Capture",
+      "description": "Terrain imagery supporting topographic mapping and elevation studies."
+    },
+    {
+      "url": "/images/drone/pre-construction.jpg",
+      "title": "Pre-Construction Site Documentation",
+      "description": "Baseline aerial documentation before site works commence."
+    },
+    {
+      "url": "/images/drone/volumetric-monitoring.jpg",
+      "title": "Volumetric & Site Monitoring",
+      "description": "Aerial capture supporting volume estimation and periodic site review."
+    }
+  ]
+}

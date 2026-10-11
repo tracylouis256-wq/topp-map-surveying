@@ -12,32 +12,32 @@ const TechnologyShowcase = () => {
     {
       name: 'GNSS RTK Receivers',
       image: '/images/equipment/gnss.jpg',
-      description: 'Centimeter-level accuracy for precise positioning'
+      description: 'Centimetre-level positioning for control, boundary and detail surveys.'
     },
     {
       name: 'Total Stations',
       image: '/images/equipment/total-station.jpg',
-      description: 'High-precision angle and distance measurement'
+      description: 'Precise angle and distance measurement for engineering and construction work.'
     },
     {
       name: 'Drone Photogrammetry',
       image: '/images/equipment/drone.jpg',
-      description: 'Aerial mapping and 3D modeling capabilities'
+      description: 'Aerial mapping and site documentation on qualifying projects.'
     },
     {
-      name: 'GIS Software',
+      name: 'GIS & Spatial Analysis',
       image: '/images/equipment/gis.jpg',
-      description: 'Advanced spatial analysis and data management'
+      description: 'Spatial analysis, map production and geospatial data management.'
     },
     {
-      name: '3D Laser Scanning',
-      image: '/images/equipment/laser-scanner.jpg',
-      description: 'Detailed as-built documentation'
+      name: 'CAD Drafting & Plan Preparation',
+      image: '/images/equipment/cad-drafting.jpg',
+      description: 'Digital survey drawings, site layouts, plans and technical documentation.'
     },
     {
       name: 'GPS Data Collectors',
       image: '/images/equipment/gps-data-collector.jpg',
-      description: 'Professional-grade GPS for accurate point collection and boundary surveys'
+      description: 'Field-grade handhelds for accurate point capture and boundary work.'
     }
   ];
 
@@ -48,11 +48,11 @@ const TechnologyShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <h2 className="section-title">Technology We Use</h2>
+          <h2 className="section-title">Technology & Methods</h2>
           <p className="section-subtitle">
-            Cutting-edge equipment for accurate and efficient surveys
+            Instruments and workflows applied across our surveying and geospatial projects.
           </p>
         </motion.div>
 
@@ -69,7 +69,8 @@ const TechnologyShowcase = () => {
                 <img
                   src={tech.image}
                   alt={tech.name}
-                  className="w-full h-full object-fill group-hover:scale-105 transition duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6 flex-grow">

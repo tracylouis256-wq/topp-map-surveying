@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { COMPANY_INFO } from '../../utils/constants';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,14 +38,14 @@ const Navbar = () => {
     >
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          {/* Logo — GEO (white) + AXIS (orange) matching the brand mark */}
+          {/* Logo — Map (white) + Rivo (green) matching the MapRivo brand mark */}
           <Link to="/" className="flex items-center group">
             <div className="flex items-baseline">
               <span className="text-3xl font-black tracking-tight text-white">
-                GEO
+                Map
               </span>
               <span className="text-3xl font-black ml-0.5 text-primary">
-                AXIS
+                Rivo
               </span>
             </div>
             <div className="ml-3 flex flex-col">

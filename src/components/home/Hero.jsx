@@ -12,7 +12,6 @@ const Hero = () => {
     });
   };
 
-  // Pre-filled WhatsApp greeting — real newlines, encoded once
   const whatsappGreeting =
     `Hello ${COMPANY_INFO.name}, I'm interested in your surveying services.`;
   const whatsappLink =
@@ -64,11 +63,15 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Ghana's trusted leader in professional land surveying and geospatial solutions.
-          Delivering accuracy and excellence with cutting-edge technology.
+          Professional land surveying and geospatial solutions for land,
+          development and construction projects across Ghana.
+          {' '}
+          <span className="italic text-gray-300">
+            Mapping Today, Shaping Tomorrow.
+          </span>
         </motion.p>
 
-        {/* Service Pills - Scrollable on mobile if needed */}
+        {/* Service Pills */}
         <motion.div
           className="flex flex-wrap gap-2 sm:gap-3 mb-6 md:mb-10 max-w-full overflow-x-auto pb-2 scrollbar-hide"
           initial={{ opacity: 0, y: 30 }}
@@ -130,7 +133,7 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* Quick Contact - Compact for mobile */}
+        {/* Quick Contact */}
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mt-8 sm:mt-12 text-xs sm:text-sm text-gray-300"
           initial={{ opacity: 0 }}

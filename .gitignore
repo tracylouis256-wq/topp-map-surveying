@@ -39,3 +39,5 @@ vite.config.js.timestamp-*
 
 # OS files
 Thumbs.db
+# Local backups (not for deployment)
+*-backup-*/

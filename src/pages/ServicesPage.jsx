@@ -10,7 +10,7 @@ const ServicesPage = () => {
       id: 'cadastral',
       title: 'Cadastral and Site Plans',
       icon: 'FaMap',
-      description: 'Accurate cadastral surveys and site plans for property boundaries and land registration.',
+      description: 'Cadastral surveys and site plans supporting property boundaries, demarcation and land registration.',
       applications: [
         'Land registration and title preparation',
         'Property boundary determination',
@@ -19,19 +19,19 @@ const ServicesPage = () => {
         'Subdivision planning'
       ],
       benefits: [
-        'Legal recognition of property boundaries',
-        'Clear documentation for transactions',
-        'Support for development applications',
-        'Prevention of boundary disputes'
+        'Clear spatial documentation of property boundaries',
+        'Supporting documentation for land transactions',
+        'Input for development and planning applications',
+        'Reduces risk of boundary-related disputes'
       ],
-      image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&auto=format&fit=crop',
-      imageAlt: 'Surveyor with theodolite equipment'
+      image: '/images/services/cadastral.jpg',
+      imageAlt: 'Surveyor establishing boundary markers'
     },
     {
       id: 'topographic',
       title: 'Topographic and Boundary Surveys',
       icon: 'FaRuler',
-      description: 'Detailed topographic mapping and precise boundary determination for development projects.',
+      description: 'Topographic mapping and boundary determination for development, engineering and land-use projects.',
       applications: [
         'Construction planning',
         'Infrastructure design',
@@ -40,76 +40,76 @@ const ServicesPage = () => {
         'Site grading design'
       ],
       benefits: [
-        'Accurate terrain representation',
-        'Optimized design decisions',
+        'Reliable terrain representation',
+        'Better-informed design decisions',
         'Cost-effective planning',
-        'Regulatory compliance'
+        'Support for regulatory submissions'
       ],
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e6c880?w=800&auto=format&fit=crop',
-      imageAlt: 'Surveying equipment on map'
+      image: '/images/services/topographic.jpg',
+      imageAlt: 'Topographic survey in the field'
     },
     {
       id: 'construction',
       title: 'Construction and Mine Surveys',
       icon: 'FaHardHat',
-      description: 'Comprehensive survey support for construction projects and mining operations.',
+      description: 'Survey support for construction, mining and infrastructure works — including setting out, level control and progress documentation.',
       applications: [
-        'Construction layout',
+        'Construction setting out',
         'Progress monitoring',
         'Volume calculations',
         'Pit and stockpile surveys',
         'As-built documentation'
       ],
       benefits: [
-        'Precise construction guidance',
-        'Real-time progress tracking',
-        'Accurate material calculations',
-        'Safety compliance'
+        'Accurate on-site positioning',
+        'Reliable progress tracking',
+        'Verifiable material volumes',
+        'Support for safety and quality compliance'
       ],
-      image: 'https://images.unsplash.com/photo-1541971875076-8f970d573be5?w=800&auto=format&fit=crop',
-      imageAlt: 'Construction site with survey equipment'
+      image: '/images/services/construction.jpg',
+      imageAlt: 'Surveyor on a construction site'
     },
     {
       id: 'drone',
-      title: 'Drone Mapping',
+      title: 'UAV / Drone Mapping',
       icon: 'FaPaperPlane',
-      description: 'Cutting-edge drone technology for aerial mapping and site inspections.',
+      description: 'Aerial mapping and site documentation on qualifying projects, where equipment and qualified personnel are available.',
       applications: [
         'Aerial orthomosaic mapping',
-        '3D terrain modeling',
+        '3D terrain modelling',
         'Progress monitoring',
         'Stockpile volume calculations',
-        'Inspection and surveillance'
+        'Site inspection and documentation'
       ],
       benefits: [
-        'Fast data collection',
-        'High-resolution imagery',
-        'Safe access to difficult areas',
-        'Cost-effective surveying'
+        'Rapid coverage of large sites',
+        'High-resolution aerial imagery',
+        'Access to areas difficult to reach on foot',
+        'Cost-effective for wide-area capture'
       ],
-      image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&auto=format&fit=crop',
-      imageAlt: 'Drone flying over landscape'
+      image: '/images/services/drone.jpg',
+      imageAlt: 'Drone used for aerial mapping'
     },
     {
       id: 'architectural',
-      title: 'Architectural Designs',
+      title: 'Architectural Drawing & Planning Support',
       icon: 'FaDraftingCompass',
-      description: 'Professional architectural design services integrated with survey data.',
+      description: 'Floor plans, site layouts, elevations and CAD drafting prepared in coordination with survey data.',
       applications: [
-        'Residential design',
-        'Commercial buildings',
-        'Site planning',
-        'Renovation projects',
-        '3D visualization'
+        'Residential floor plans',
+        'Commercial building drawings',
+        'Site layout planning',
+        'Renovation and extension drawings',
+        'Conceptual design support'
       ],
       benefits: [
-        'Integrated design approach',
+        'Drawings coordinated with survey data',
         'Accurate site integration',
-        'Visual project planning',
-        'Regulatory compliance'
+        'Clear documentation for planning',
+        'Support for approval submissions'
       ],
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&auto=format&fit=crop',
-      imageAlt: 'Architectural blueprints and plans'
+      image: '/images/services/architectural.jpg',
+      imageAlt: 'Architectural drawings and plans'
     }
   ];
 
@@ -118,7 +118,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="bg-secondary text-white py-16">
         <div className="container-custom text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -126,13 +126,13 @@ const ServicesPage = () => {
           >
             Our Services
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Comprehensive surveying solutions tailored to your specific needs
+            Surveying, geospatial and planning support for land and development projects.
           </motion.p>
         </div>
       </section>
@@ -154,13 +154,13 @@ const ServicesPage = () => {
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Contact us today for a free consultation and quote
+            Send us your project details and we'll respond with a scope and quotation.
           </p>
           <a
             href="/request-survey"
             className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
           >
-            Request Survey Quote
+            Request a Survey Quote
           </a>
         </div>
       </section>

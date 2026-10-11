@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { 
-  FaMap, 
-  FaRuler, 
-  FaHardHat, 
+import {
+  FaMap,
+  FaRuler,
+  FaHardHat,
   FaDraftingCompass,
-  FaPaperPlane  // Add this
+  FaPaperPlane
 } from 'react-icons/fa';
 
 const ServicesOverview = () => {
@@ -20,31 +20,31 @@ const ServicesOverview = () => {
     {
       icon: <FaMap className="text-4xl text-primary" />,
       title: 'Cadastral and Site Plans',
-      description: 'Accurate cadastral surveys and site plans for property boundaries and land registration.',
+      description: 'Cadastral surveys and site plans supporting property boundaries, demarcation and land registration.',
       link: '/services#cadastral'
     },
     {
       icon: <FaRuler className="text-4xl text-primary" />,
       title: 'Topographic and Boundary Surveys',
-      description: 'Detailed topographic mapping and precise boundary determination for development projects.',
+      description: 'Topographic mapping and boundary determination for development, engineering and land-use projects.',
       link: '/services#topographic'
     },
     {
       icon: <FaHardHat className="text-4xl text-primary" />,
       title: 'Construction and Mine Surveys',
-      description: 'Comprehensive survey support for construction projects and mining operations.',
+      description: 'Setting out, level control and survey support for construction, mining and infrastructure works.',
       link: '/services#construction'
     },
     {
-      icon: <FaPaperPlane className="text-4xl text-primary" />,  // Changed to FaPaperPlane
+      icon: <FaPaperPlane className="text-4xl text-primary" />,
       title: 'UAV / Drone Surveys',
-      description: 'Cutting-edge drone technology for aerial mapping and site inspections.',
+      description: 'Aerial mapping and site documentation on qualifying projects where equipment and personnel are available.',
       link: '/services#drone'
     },
     {
       icon: <FaDraftingCompass className="text-4xl text-primary" />,
-      title: 'Architectural Designs',
-      description: 'Professional architectural design services integrated with survey data.',
+      title: 'Architectural Drawing & Planning Support',
+      description: 'Floor plans, site layouts and CAD drafting prepared in coordination with survey data.',
       link: '/services#architectural'
     }
   ];
@@ -60,7 +60,7 @@ const ServicesOverview = () => {
         >
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
-            Comprehensive surveying solutions tailored to your needs
+            Surveying, geospatial and planning support for land and development projects.
           </p>
         </motion.div>
 

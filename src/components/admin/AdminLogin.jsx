@@ -43,7 +43,7 @@ const AdminLogin = () => {
       >
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-secondary mb-2">Admin Login</h1>
-          <p className="text-accent">GeoAxis Survey Consult</p>
+          <p className="text-accent">MapRivo Survey Consult</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

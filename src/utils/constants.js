@@ -15,12 +15,12 @@ export const REQUEST_STATUS = {
 };
 
 export const COMPANY_INFO = {
-  name: 'GeoAxis Survey Consult',
-  tagline: 'Accuracy Builds Tomorrow',
-  address: 'Tamso Market, Ghana',       // ← update if your base changes
-  phone: '+233 53 989 6049',             // for display
-  phoneRaw: '233539896049',              // for tel: and wa.me links
-  email: 'geoaxissurveyconsult@gmail.com',
+  name: 'MapRivo Survey Consult',
+  tagline: 'Mapping Today, Shaping Tomorrow.',
+  address: 'Accra, Ghana',
+  phone: '+233 53 989 6049',
+  phoneRaw: '233539896049',
+  email: 'maprivo.surveyconsult@gmail.com',
   whatsapp: '233539896049',
 };
 
@@ -29,32 +29,22 @@ export const WHATSAPP_BASE = `https://wa.me/${COMPANY_INFO.whatsapp}`;
 export const MAILTO_BASE   = `mailto:${COMPANY_INFO.email}`;
 export const TEL_BASE      = `tel:+${COMPANY_INFO.phoneRaw}`;
 
+// Only WhatsApp is active right now — add Facebook/Instagram/etc.
+// back here once the accounts exist and the icons will render automatically.
 export const SOCIAL_LINKS = {
-  whatsapp:  'https://wa.me/233539896049',
-  facebook:  'https://facebook.com/geoaxissurveyconsult',        // ← verify handle
-  instagram: 'https://instagram.com/geoaxissurveyconsult',       // ← verify handle
-  linkedin:  'https://linkedin.com/company/geoaxissurveyconsult',// ← verify handle
-  twitter:   'https://x.com/geoaxissurvey',                // or x.com/geoaxissurvey
-  youtube:   'https://youtube.com/@geoaxissurveyconsult',        // ← verify handle
-  tiktok:    'https://tiktok.com/@geoaxissurveyconsult',         // ← verify handle
+  whatsapp: 'https://wa.me/233539896049',
 };
 
 // Icons are handled in the Footer/Navbar — this map lets you loop cleanly
 export const SOCIAL_ORDER = [
   'whatsapp',
-  'facebook',
-  'instagram',
-  'linkedin',
-  'twitter',
-  'youtube',
-  'tiktok',
 ];
 
-// Brand colors pulled from your logo
+// Brand colors aligned with the MapRivo logo
 export const COLORS = {
-  primary:    '#F26522',   // accent orange
-  secondary:  '#1E2530',   // charcoal dark
-  accent:     '#6c757d',   // neutral grey
-  background: '#ffffff',
-  light:      '#F8F9FA',   // soft off-white
+  primary:    '#0B2D6B',   // MapRivo navy
+  secondary:  '#16A34A',   // emerald green
+  accent:     '#3B82F6',   // sky blue
+  background: '#FFFFFF',
+  light:      '#F7F8FA',
 };

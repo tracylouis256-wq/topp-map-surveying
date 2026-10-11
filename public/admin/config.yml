@@ -2,11 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-# Where uploaded images get stored
 media_folder: "public/images/projects"
 public_folder: "/images/projects"
 
-# Your content collections
 collections:
   # 📁 PROJECTS
   - name: "projects"
@@ -14,12 +12,18 @@ collections:
     label_singular: "Project"
     folder: "content/projects"
     create: true
+    extension: "json"      # ← ADD THIS
+    format: "json"         # ← ADD THIS
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false, hint: "Leave blank to auto-generate from title" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["Cadastral", "Boundary", "Topographic", "Construction", "Drone", "Mining"] }
-      - { label: "Year", name: "year", widget: "number", default: 2025 }
+      - { label: "Region", name: "region", widget: "string", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["Cadastral", "Boundary", "Topographic", "Construction", "Drone", "Mining", "Road", "Engineering", "Heritage"] }
+      - { label: "Year", name: "year", widget: "number", default: 2026 }
+      - { label: "Client", name: "client", widget: "string", required: false }
+      - { label: "Equipment Used", name: "equipment", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Cover Image", name: "coverImage", widget: "image" }
       - label: "Gallery"
@@ -32,11 +36,11 @@ collections:
         widget: "object"
         required: false
         fields:
-          - { label: "Latitude", name: "lat", widget: "number" }
-          - { label: "Longitude", name: "lng", widget: "number" }
+          - { label: "Latitude", name: "lat", widget: "number", value_type: "float" }
+          - { label: "Longitude", name: "lng", widget: "number", value_type: "float" }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
 
-  # 📊 STATISTICS (single file)
+  # 📊 STATISTICS (unchanged)
   - name: "statistics"
     label: "Statistics"
     files:
@@ -44,7 +48,26 @@ collections:
         name: "stats"
         file: "content/statistics.json"
         fields:
-          - { label: "Cadastral Surveys", name: "cadastral", widget: "number", default: 195 }
-          - { label: "Years of Experience", name: "years", widget: "number", default: 4 }
-          - { label: "Clients Served", name: "clients", widget: "number", default: 112 }
-          - { label: "Accuracy Commitment (%)", name: "accuracy", widget: "number", default: 99.5 }
+          - { label: "Cadastral Surveys", name: "cadastral", widget: "number", default: 0 }
+          - { label: "Years of Experience", name: "years", widget: "number", default: 0 }
+          - { label: "Clients Served", name: "clients", widget: "number", default: 0 }
+          - { label: "Accuracy Commitment (%)", name: "accuracy", widget: "number", default: 0 }
+
+  # 🚁 AERIAL GALLERY (unchanged)
+  - name: "aerial"
+    label: "Aerial Gallery"
+    files:
+      - label: "Aerial Section"
+        name: "aerial"
+        file: "content/drone-gallery.json"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", default: "Aerial Mapping & Photogrammetry" }
+          - { label: "Section Subtitle", name: "subtitle", widget: "text" }
+          - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "url", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
